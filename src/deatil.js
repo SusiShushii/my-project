@@ -7,7 +7,7 @@ const MyDetail = () => {
   useEffect(() => {
     fetchPrints();
 
-    const interval = setInterval(fetchPrints, 1000); 
+    const interval = setInterval(fetchPrints, 6000); 
 
     return () => {
       clearInterval(interval);
