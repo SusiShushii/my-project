@@ -1,0 +1,91 @@
+body{
+    background: url('./images/Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow: auto;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  height: 100%;
+}
+
+.Topleft { 
+    grid-column: 1;
+    text-align: start;
+    padding: 5vh 0vh 0vh 6vh;
+    color: white;
+    font-family: "Trebuchet MS", sans-serif;
+
+  }
+  .Topright {
+    grid-column: 3;
+    text-align: end;
+    padding: 2vh 1vh 0vh 0vh;
+    color:white;
+    font-family: "Trebuchet MS", sans-serif;
+
+  }
+
+  .Topright ul li {
+    padding: 0.5vh;
+  }
+
+.image_display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-top: 10vh;
+  max-width: 100vh;
+}
+
+.Icon_Temp{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 4.8vh;
+  white-space: nowrap;
+}
+
+.footer{
+  color: white;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.footer-category{
+  background: url('./images/icon/tab.png');
+  background-size: cover;
+  align-items: center;
+  background-repeat: no-repeat; 
+}
+.footer ul {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 5vh;
+  padding: 0;
+  font-size: 1.75vh;
+  margin: 0;
+  width: 100%;
+}
+.footer ul li {
+  min-width: 60px;
+  width: 60px;
+  text-align: center;
+  margin: 0.5vh;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
