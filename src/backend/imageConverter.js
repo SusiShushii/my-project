@@ -1,0 +1,38 @@
+const fs      = require('fs');
+const path    = require('path');
+const Pdf2Img = require('pdf2img-promises');
+
+//const input = path.join(__dirname, '..', '..', 'public', 'pdf', 'result_20.pdf');
+//const outputDir = path.join(__dirname, '..', '..','public', 'image');
+
+
+//const fileName = 'test';
+
+async function convertPdfToImages(inputPdfPath, outputFolder, fileName) {
+  const converter = new Pdf2Img();
+
+  // The event emitter is emitting to the file name
+  converter.on(fileName, (msg) => {
+    console.log('Received: ', msg);
+  });
+
+  converter.setOptions({
+    type: 'jpg',      // png or jpg, default jpg
+    size: 1024,       // default 1024
+    density: 600,     // default 600
+    quality: 100,     // default 100
+    outputdir: outputFolder,
+    outputname: fileName,
+    page: null        // convert selected page, default null (if null given, then it will convert all pages)
+  });
+  converter.convert(inputPdfPath)
+  .then(info => {
+    console.log(info);
+  })
+  .catch(err => {
+    console.error(err);
+  })
+  
+}
+
+module.exports = convertPdfToImages;
