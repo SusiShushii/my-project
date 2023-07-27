@@ -219,7 +219,7 @@ app.get('/api/images', (req, res) => {
     }
 
     const imageFiles = files.filter((file) => {
-      return /\.(png|jpe?g|gif)$/i.test(file); // Filter only image files (png, jpeg, jpg, gif)
+      return /\.(png|jpe?g|gif)$/i.test(file);
     });
 
     res.json(imageFiles);
