@@ -2,12 +2,6 @@ const fs      = require('fs');
 const path    = require('path');
 const Pdf2Img = require('pdf2img-promises');
 
-//const input = path.join(__dirname, '..', '..', 'public', 'pdf', 'result_20.pdf');
-//const outputDir = path.join(__dirname, '..', '..','public', 'image');
-
-
-//const fileName = 'test';
-
 async function convertPdfToImages(inputPdfPath, outputFolder, fileName) {
   const converter = new Pdf2Img();
 
