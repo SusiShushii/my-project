@@ -5,7 +5,6 @@ const Pdf2Img = require('pdf2img-promises');
 async function convertPdfToImages(inputPdfPath, outputFolder, fileName) {
   const converter = new Pdf2Img();
 
-  // The event emitter is emitting to the file name
   converter.on(fileName, (msg) => {
     console.log('Received: ', msg);
   });
