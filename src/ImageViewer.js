@@ -12,8 +12,6 @@ import 'swiper/css/scrollbar';
 import './style.css';
 import { EffectCoverflow, Pagination ,Navigation} from 'swiper/modules';
 
-// <SwiperSlide><img style ={{width:'200px'}} src = {require(`./21-07-2023-INV-23060047_1.jpg`)}/></SwiperSlide>
-
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const ImageViewer = () =>{
