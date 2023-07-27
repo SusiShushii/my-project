@@ -3,7 +3,7 @@ const  {REACT_APP_API_KEY_GRAPHQL} = process.env;
 
 const MyDetail = () => {
   const [prints, setPrints] = useState([]);
-  const sortedPrints = prints.sort((a, b) => b._id - a._id); // เรียงลำดับข้อมูลตาม _id มากสุดลงไปน้อยสุด
+  const sortedPrints = prints.sort((a, b) => b._id - a._id); 
   useEffect(() => {
     fetchPrints();
 
